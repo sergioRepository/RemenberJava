@@ -9,6 +9,7 @@ public class Estudiante {
     public Estudiante(String nombre, double[] notas) {
         this.nombre = nombre;
         this.notas = notas;
+
     }
 
 
