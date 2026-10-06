@@ -7,7 +7,7 @@ public class GestionEstudiante {
     Estudiante[] arrayEstudiantes;
     Scanner teclado = new Scanner(System.in);
 
-    private int CantidadEstudiantesSolicitar(){
+    public int CantidadEstudiantesSolicitar(){
         System.out.println("digita la cantidad de estudinates a evaluar");
         return teclado.nextInt();
     }

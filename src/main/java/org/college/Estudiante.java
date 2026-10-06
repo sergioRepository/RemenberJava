@@ -5,12 +5,21 @@ public class Estudiante {
     private double [] notas;
     private double promedio;
 
+
     public Estudiante() {
     }
     public Estudiante(String nombre, double[] notas) {
         this.nombre = nombre;
         this.notas = notas;
-        averageNotas();
+
+    }
+
+    public String obtenerRol(){
+        return "";
+    }
+
+    public boolean estaAprobado(){
+        return (promedio) >= 70;
     }
 
     public double getPromedio() {
@@ -49,3 +58,4 @@ public class Estudiante {
         return promedio > 6.0;
     }
 }
+
