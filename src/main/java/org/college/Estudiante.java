@@ -3,16 +3,23 @@ package org.college;
 public class Estudiante {
     private String nombre;
     private double [] notas;
+    private double promedio;
 
     public Estudiante() {
     }
     public Estudiante(String nombre, double[] notas) {
         this.nombre = nombre;
         this.notas = notas;
-
+        averageNotas();
     }
 
+    public double getPromedio() {
+        return promedio;
+    }
 
+    public void setPromedio(double promedio) {
+        this.promedio = promedio;
+    }
 
     public String getNombre() {
         return nombre;
@@ -31,18 +38,14 @@ public class Estudiante {
     }
 
 
-    public double averageNotas(){
+    public void averageNotas(){
       double plusNotas = 0;
      for(double nota :notas){
        plusNotas+=nota;
       }
-     return plusNotas/notas.length;
+     promedio = plusNotas/notas.length;
     };
     public  boolean StudentPassed(){
-     if(averageNotas()>6.0){
-         return true;
-     }else{
-         return false;
-     }
+        return promedio > 6.0;
     }
 }
