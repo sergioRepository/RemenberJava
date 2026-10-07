@@ -3,20 +3,15 @@ package org.shopOnline;
 import java.util.ArrayList;
 
 public class carrito {
-    private String serial;
     private ArrayList<DetailsProducto> arrayProductos = new ArrayList<>();
     private double total;
 
-    public carrito(String serial) {
-        this.serial = serial;
+    public carrito(ArrayList<DetailsProducto> arrayProductos) {
+        this.arrayProductos = arrayProductos;
+        calcularTotalCarrito();
     }
 
-    public String getSerial() {
-        return serial;
-    }
-
-    public void setSerial(String serial) {
-        this.serial = serial;
+    public carrito() {
     }
 
     public ArrayList<DetailsProducto> getArrayProductos() {

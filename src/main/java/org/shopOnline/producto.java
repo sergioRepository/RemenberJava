@@ -1,5 +1,6 @@
 package org.shopOnline;
 
+import java.util.Random;
 import java.util.UUID;
 
 public class producto {
@@ -8,8 +9,10 @@ public class producto {
     private double precioProducto;
     private int stock;
 
+
     public producto(double precioProducto, int stock, String nombreProducto) {
-        this.serial = UUID.randomUUID().toString();
+        int randomNum = new Random().nextInt(9000) + 1000;
+        this.serial = String.valueOf(randomNum);
         this.precioProducto = precioProducto;
         this.stock = stock;
         this.nombreProducto = nombreProducto;
