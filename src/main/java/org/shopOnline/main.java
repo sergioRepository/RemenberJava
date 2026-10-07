@@ -1,6 +1,6 @@
 package org.shopOnline;
 
-import java.sql.SQLOutput;
+
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -44,6 +44,15 @@ public class main {
     }
 
     private static void mostrarFactura() {
+        System.out.println("=====FACTURA=====");
+        for(DetailsProducto details: carShop.getArrayProductos()){
+            System.out.println("nombre:"+details.getProductoAtributo().getNombreProducto());
+            System.out.print(" cantidad:"+details.getCantidad());
+            System.out.println(" totalDetail:"+details.getTotalDetails());
+        }
+        System.out.println("===========================");
+        System.out.println("totaL:"+carShop.getTotal());
+        System.out.println("===========================");
 
 
     }
@@ -55,8 +64,11 @@ public class main {
         System.out.println("cantidad:");
         int cantidad = teclado.nextInt();
         for (producto product : catalogo){
-            if (Objects.equals(product.getSerial(), codigo)){
+            if (Objects.equals(product.getSerial(),codigo)){
                 carShop.agregarProducto(product,cantidad);
+                System.out.println("Producto añadido correctamente al carrito");
+            }else {
+                System.out.println("Producto no existe o mal digitado");
             }
         }
     }
