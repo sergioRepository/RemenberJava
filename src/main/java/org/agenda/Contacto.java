@@ -1,43 +1,23 @@
 package org.agenda;
 
-public class Contacto {
+class Contacto {
     private String nombre;
-    private String correo;
     private String telefono;
+    private String email;
+    private String grupo;
 
-    public Contacto(String nombre, String correo, String telefono) {
+    public Contacto(String nombre, String telefono, String email, String grupo) {
         this.nombre = nombre;
-        this.correo = correo;
         this.telefono = telefono;
+        this.email = email;
+        this.grupo = grupo;
     }
+    public String getNombre() { return nombre; }
+    public String getTelefono() { return telefono; }
+    public String getEmail() { return email; }
+    public String getGrupo() { return grupo; }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-    public void mostraInfo(){
-        System.out.println("datos del contacto");
-        System.out.println("nombre = " + nombre);
-        System.out.println("correo = " + correo);
-        System.out.println("telefono = " + telefono);
+    public void mostrarInfo() {
+        System.out.println(nombre + " | " + telefono + " | " + email + " | Grupo: " + grupo);
     }
 }
